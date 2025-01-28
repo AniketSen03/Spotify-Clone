@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Main = ({ artists, hero }) => {
-  const [toggle, settoggle] = useState(true)
+  const [toggle1, settoggle1] = useState(true)
+  const [toggle2, settoggle2] = useState(true)
   return (
     <div className=" mx-5 text-white w-[80%]">
       <div className="flex justify-between">
         <h1 className="text-3xl my-4 mx-5">Popular Artists</h1>
-        <button className="text-xl my-4 mx-5 text-zinc-500 font-['math']" onClick={()=>settoggle(prev => prev === true ? false : true)}>{toggle==true?'show all':'show less'}</button>
+        <button className="my-4 mx-5" onClick={() => settoggle1(prev => prev === true ? false : true)}>{toggle1? 'Show all' : 'Show less'}</button>
       </div>
-      <div className={`${toggle? 'flex flex-wrap justify-evenly bg-primary h-[13em] overflow-hidden': 'flex flex-wrap justify-evenly bg-primary '}`} >
+      <div className={`${toggle1 ? 'flex flex-wrap justify-evenly bg-primary h-[13em] overflow-hidden' : 'flex flex-wrap justify-evenly bg-primary '}`} >
         {artists.map(
           (artist) =>
             artist && (
@@ -32,8 +33,11 @@ const Main = ({ artists, hero }) => {
         )}
       </div>
 
-      <h1 className="text-3xl my-4 mx-5">Popular Celebrities</h1>
-      <div className="flex flex-wrap justify-evenly">
+      <div className="flex justify-between">
+        <h1 className="text-3xl my-4 mx-5">Popular Celebrities</h1>
+        <button className="my-4 mx-5" onClick={() => { settoggle2(prev => prev === false ? true : false) }}>{toggle2?'Show all':'Show less'}</button>
+      </div>
+      <div className={`${toggle2?"flex flex-wrap justify-evenly bg-primary h-[13em] overflow-hidden":"flex flex-wrap justify-evenly bg-primary "}`}>
         {hero.map(
           (hero) =>
             hero && (

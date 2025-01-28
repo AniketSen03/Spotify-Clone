@@ -4,3 +4,11 @@
 body{
     background: #000;
 }
+::-webkit-scrollbar{
+    background-color:  #101010;
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#1f1f1f ;
+    border-radius: 10px;
+}
