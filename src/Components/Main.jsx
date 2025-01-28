@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Main = ({ artists, hero }) => {
+  const [toggle, settoggle] = useState(true)
   return (
-    <div className="bg-primary mx-5 text-white w-[80%]">
-      <h1 className="text-3xl my-4 mx-5">Popular Artists</h1>
-      <div className="flex flex-wrap justify-evenly">
+    <div className=" mx-5 text-white w-[80%]">
+      <div className="flex justify-between">
+        <h1 className="text-3xl my-4 mx-5">Popular Artists</h1>
+        <button className="text-xl my-4 mx-5 text-zinc-500 font-['math']" onClick={()=>settoggle(prev => prev === true ? false : true)}>{toggle==true?'show all':'show less'}</button>
+      </div>
+      <div className={`${toggle? 'flex flex-wrap justify-evenly bg-primary h-[13em] overflow-hidden': 'flex flex-wrap justify-evenly bg-primary '}`} >
         {artists.map(
           (artist) =>
             artist && (
@@ -27,31 +31,31 @@ const Main = ({ artists, hero }) => {
             )
         )}
       </div>
-     
-        <h1 className="text-3xl my-4 mx-5">Popular Celebrities</h1>
-        <div className="flex flex-wrap justify-evenly">
-          {hero.map(
-            (hero) =>
-              hero && (
-                <Link
-                  to={`/Hero/${hero.id}`}
-                  key={hero.id}
-                  className="m-3 flex flex-col justify-evenly"
-                >
-                  <img
-                    src={hero.images?.[0]?.url || "https://via.placeholder.com/150"}
-                    className="h-36 w-36 rounded-full"
-                    alt={hero.name}
-                  />
-                  <h1 className="text-lg font-bold">
-                    {hero.name.length > 15 ? `${hero.name.slice(0, 10)}...` : hero.name}
-                  </h1>
-                  <h1 className="text-sm text-zinc-500">Celebrities</h1>
-                </Link>
-              )
-          )}
-        </div>
+
+      <h1 className="text-3xl my-4 mx-5">Popular Celebrities</h1>
+      <div className="flex flex-wrap justify-evenly">
+        {hero.map(
+          (hero) =>
+            hero && (
+              <Link
+                to={`/Hero/${hero.id}`}
+                key={hero.id}
+                className="m-3 flex flex-col justify-evenly"
+              >
+                <img
+                  src={hero.images?.[0]?.url || "https://via.placeholder.com/150"}
+                  className="h-36 w-36 rounded-full"
+                  alt={hero.name}
+                />
+                <h1 className="text-lg font-bold">
+                  {hero.name.length > 15 ? `${hero.name.slice(0, 10)}...` : hero.name}
+                </h1>
+                <h1 className="text-sm text-zinc-500">Celebrities</h1>
+              </Link>
+            )
+        )}
       </div>
+    </div>
 
 
   );

@@ -79,7 +79,7 @@ function App() {
         "Mukesh",
         "Anuradha",
         "Shaan",
-        "Shankar",
+        "Shankar m",
       ]);
     }
   }, [tokenfetch]); // Run when token is fetched
@@ -113,20 +113,20 @@ function App() {
         "SRK",
         "Salman",
         "rashmika mandanna",
-        "Akshay",
+        "Akshay kumar",
         "Amitabh",
         "Rajesh Khanna",
-        "Alia bhatt",
-        "Amir Khan",
-        "Deepika",
+        "Alia ",
+        "Amir k",
+        "Deepika p",
         "priyanka c",
         "ranveer kapoor",
         "rishi kapoor",
         "hema malini",
-        "dharmendra",
+        "dharmendr",
         "sanjay dutt",
         "anil kapoor",
-        "ajay devgan",
+        "ajay d",
         "shahid k",
       ]);
     }
