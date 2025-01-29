@@ -19,8 +19,8 @@ const Main = ({ artists, hero }) => {
               <Link
                 to={`/Artist/${artist.id}`}
                 key={artist.id}
-                className="m-3 flex flex-col justify-evenly"
-              >
+                className="m-3 flex flex-col justify-evenly relative z-0"
+              ><div className="absolute bottom-14 right-1 z-10 rounded-full bg-green-500 h-10 w-10 p-1 text-center"><svg data-encore-id="icon" role="img" aria-hidden="true" class="absolute h-8 Svg-sc-ytk21e-0 dYnaPI e-9541-icon" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg></div>
                 <img
                   src={artist.images?.[0]?.url || "https://via.placeholder.com/150"}
                   className="h-36 w-36 rounded-full"
