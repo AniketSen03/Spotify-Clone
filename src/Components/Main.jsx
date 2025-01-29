@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import '../App.css'
+import Footer from "./Footer";
 
 const Main = ({ artists, hero }) => {
   const [toggle1, settoggle1] = useState(true)
   const [toggle2, settoggle2] = useState(true)
   return (
-    <div className=" mx-5 text-white w-[80%]">
-      <div className="flex justify-between">
-        <h1 className="text-3xl my-4 mx-5">Popular Artists</h1>
-        <button className="my-4 mx-5" onClick={() => settoggle1(prev => prev === true ? false : true)}>{toggle1? 'Show all' : 'Show less'}</button>
+    <div className="bg-primary mx-5 text-white w-[80%] main">
+      <div className="flex justify-between items-center align-box">
+        <h1 className="text-3xl my-4 mx-5 heading">Popular Artists</h1>
+        <button className="my-4 mx-5 subheading" onClick={() => settoggle1(prev => prev === true ? false : true)}>{toggle1? 'Show all' : 'Show less'}</button>
       </div>
       <div className={`${toggle1 ? 'flex flex-wrap justify-evenly bg-primary h-[13em] overflow-hidden' : 'flex flex-wrap justify-evenly bg-primary '}`} >
         {artists.map(
@@ -33,9 +35,9 @@ const Main = ({ artists, hero }) => {
         )}
       </div>
 
-      <div className="flex justify-between">
-        <h1 className="text-3xl my-4 mx-5">Popular Celebrities</h1>
-        <button className="my-4 mx-5" onClick={() => { settoggle2(prev => prev === false ? true : false) }}>{toggle2?'Show all':'Show less'}</button>
+      <div className="flex justify-between item-center align-box">
+        <h1 className="text-3xl my-4 mx-5 heading ">Popular Celebrities</h1>
+        <button className="my-4 mx-5 subheading" onClick={() => { settoggle2(prev => prev === false ? true : false) }}>{toggle2?'Show all':'Show less'}</button>
       </div>
       <div className={`${toggle2?"flex flex-wrap justify-evenly bg-primary h-[13em] overflow-hidden":"flex flex-wrap justify-evenly bg-primary "}`}>
         {hero.map(
@@ -59,6 +61,7 @@ const Main = ({ artists, hero }) => {
             )
         )}
       </div>
+      <Footer/>
     </div>
 
 

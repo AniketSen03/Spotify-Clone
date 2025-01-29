@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Footer from "./Footer";
 
 const Artist = ({ artists, tokenfetch }) => {
   const { id } = useParams();
@@ -78,6 +79,7 @@ const Artist = ({ artists, tokenfetch }) => {
           </div>
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };
