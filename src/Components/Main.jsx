@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const Main = ({ artists, hero }) => {
   const [toggle1, settoggle1] = useState(true)
   const [toggle2, settoggle2] = useState(true)
-  return (
+  return (<>
     <div className="bg-primary mx-5 text-white w-[80%] main">
       <div className="flex justify-between items-center align-box">
         <h1 className="text-3xl my-4 mx-5 heading">Popular Artists</h1>
@@ -62,19 +62,23 @@ const Main = ({ artists, hero }) => {
               </Link>
             )
         )}
-        <iframe 
-  src="https://open.spotify.com/embed/track/4uLU6hMCjMI75M1A2tKUQC" 
-  width="900" 
-  height="100" 
-  frameborder="0" 
-  allowtransparency="true" 
-  allow="encrypted-media" className="fixed bottom-1">
-</iframe>
 
       </div>
       <Footer />
     </div>
+{/* 
+    <iframe
+      src="https://open.spotify.com/embed/track/4uLU6hMCjMI75M1A2tKUQC?theme=0"
+      width="100%"
+      height="80"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media" className="fixed bottom-0">
+    </iframe> */}
 
+    
+
+  </>
 
   );
 };
