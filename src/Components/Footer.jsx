@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <div className='bg-primary py-10'>
-            <div className=' flex justify-between px-6 capitalize pb-5 items-start'>
+            <div className=' flex flex-wrap justify-between px-6 capitalize pb-5 items-start'>
                 <div className='leading-[2.5]'>
                     <h1 className='font-extrabold'>company</h1>
                     <h1>about</h1>

@@ -1,10 +1,10 @@
 @media (min-width:320px) and (max-width:720px) {
   .main{
-margin: 1em 6em; 
+    margin: 1em 6em; 
   }
-  .align-box{
-    width: 20em;
-  }
+  /* .align-box{
+    width: 17em;
+  } */
 
   .heading{
     font-size: 13px;
@@ -13,5 +13,17 @@ margin: 1em 6em;
   .subheading{
     font-size: 13px;
     margin: 0 20px;
+  }
+  .adjust-aside{
+    font-size: 10px;
+  }
+  .svg-adjust{
+height: 20px;
+  }
+  .btn-adjust{
+    padding: 4px 0;
+  }
+  .lang-adjust{
+    padding: 2px 0;
   }
 }
