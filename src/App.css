@@ -1,4 +1,4 @@
-@media (min-width:320px) and (max-width:720px) {
+@media (min-width:320px) and (max-width:768px) {
   .main{
     margin: 1em 6em; 
   }
@@ -26,4 +26,26 @@ height: 20px;
   .lang-adjust{
     padding: 2px 0;
   }
+  .font-footer{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    line-height: 3;
+  }
+  .features-hidden{
+    display: none;
+  }
+  .width-manage{
+    width: 16em;
+  }
+  .songname-adjust{
+    width: 10em;
+  }
+  .left-gap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40em;
+  }
 }
+

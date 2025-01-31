@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
             <hr />
             <div className='flex justify-between pt-5 items-center px-6'>
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center flex-wrap font-footer'>
                     <span >Legal</span>
                     <span className='ml-5'>Safety & Privacy Center</span>
                     <span className='ml-5'>Privacy Policy</span>
@@ -47,7 +47,7 @@ const Footer = () => {
                     <span className='ml-5'>About Ads</span>
                     <span className='ml-5'>Accessibility</span>
                 </div>
-                <span>©{new Date().getFullYear} Spotify AB</span>
+                <span className='font-footer'>©{new Date().getFullYear} Spotify AB</span>
             </div>
         </div>
     )
