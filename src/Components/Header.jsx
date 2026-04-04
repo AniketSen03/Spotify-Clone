@@ -87,7 +87,7 @@ const Header = () => {
     <div className="flex items-center justify-between px-3 sm:px-6 h-14 sm:h-16 bg-zinc-950 sticky top-0 z-40 border-b border-zinc-800">
 
       {/* Logo */}
-      <img src="src/assets/Logo.png" alt="Logo" className="h-8 sm:h-10 flex-shrink-0" />
+      <img src="/Logo.png" alt="Logo" className="h-8 sm:h-10 flex-shrink-0" />
 
       {/* Search */}
       <div className="relative flex-1 max-w-xl mx-4" ref={dropdownRef}>
